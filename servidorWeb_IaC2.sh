@@ -11,6 +11,7 @@ apt-get install -y apache2 \
 systemctl enable apache2
 systemctl reload apache2
 ufw allow in "Apache"
+systemctl stop ufw && sudo systemctl start ufw
 
 echo ""
 echo "Baixando e Copiando os arquivos da Aplicação..."
